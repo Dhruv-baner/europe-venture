@@ -367,7 +367,7 @@ export default function FundingDashboard() {
         </div>
 
         <div style={{ fontSize: 11, color: '#9CA3AF', textAlign: 'center', padding: '12px 0 4px' }}>
-          Prototype for internal review · data compiled from public funding announcements, Jan–Jul 2026 · amounts converted to GBP at monthly average FX rates
+          Prototype, currently integrating automation · data compiled from public funding announcements, Jan–Jul 2026 · amounts converted to GBP at monthly average FX rates
         </div>
       </div>
 
