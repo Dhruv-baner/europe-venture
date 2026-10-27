@@ -46,7 +46,12 @@ function Dashboard({ D, years, year, setYear }) {
   const [seg, setSeg] = useState(null);
   const [hoverC, setHoverC] = useState(-1);
   const [mapSel, setMapSel] = useState(-1);
-  const motion = useMemo(() => !(typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches), []);
+  // Hero animation. Full by default. If the device asks for reduced motion we show a calm version (slow glow and dim, nothing flying or drifting)
+  // instead of a frozen picture. The visitor can pause it, or switch to the full version, with the button.
+  const reduced = useMemo(() => typeof window !== 'undefined' && !!window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches, []);
+  const [mode, setMode] = useState(() => { try { const m = window.localStorage.getItem('fd-motion'); if (m === 'full' || m === 'calm' || m === 'off') return m; } catch (e) { /* ignore */ } return reduced ? 'calm' : 'full'; });
+  const full = mode === 'full', calm = mode === 'calm';
+  const onMotionClick = () => { const nm = full ? 'off' : 'full'; setMode(nm); try { window.localStorage.setItem('fd-motion', nm); } catch (e) { /* ignore */ } };
 
   const { R, cats, subsG, countries, months, colors, txt } = D;
   const N = R.length, nm = months.length;
@@ -163,21 +168,25 @@ function Dashboard({ D, years, year, setYear }) {
     <div style={{ background: BG, color: INK, fontFamily: "'Instrument Sans', system-ui, sans-serif", width: '100%' }}>
       {/* ---------------- TITLE BAND ---------------- */}
       <header style={{ position: 'relative', overflow: 'hidden', background: '#9B1B22', color: '#F4F6F8' }}>
-        <svg viewBox="0 0 760 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: '100%' }}>
+        <svg key={mode} viewBox="0 0 760 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: '100%' }}>
           {heroGroups.map((g, gi) => (
             <g key={gi} style={{ filter: g.filter }}>
-              {motion && <animate attributeName="opacity" values={g.vals} dur={g.dur} begin={g.shimmerBegin} repeatCount="indefinite" />}
-              {motion && <animateTransform attributeName="transform" type="translate" values={'0 0;' + g.drift + ';0 0'} dur={g.driftDur} begin={g.shimmerBegin} repeatCount="indefinite" />}
+              {(full || calm) && <animate attributeName="opacity" values={full ? g.vals : (g.to === '1' ? '1;0.5;1' : '1;0.55;1')} dur={full ? g.dur : (parseFloat(g.dur) * 2.2).toFixed(1) + 's'} begin={g.shimmerBegin} repeatCount="indefinite" />}
+              {full && <animateTransform attributeName="transform" type="translate" values={'0 0;' + g.drift + ';0 0'} dur={g.driftDur} begin={g.shimmerBegin} repeatCount="indefinite" />}
               {g.dots.map((d, k) => (
-                <circle key={k} cx={d.x} cy={d.y} r={g.r} fill="#F4F6F8" opacity={motion ? 0 : g.to === '1' ? 0.7 : 0.5}>
-                  {motion && <animateTransform attributeName="transform" type="translate" from={d.from} to="0 0" dur="2.4s" begin={d.begin} fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 1 0.3 1" />}
-                  {motion && <animate attributeName="opacity" from="0" to={g.to} dur="1.4s" begin={d.begin} fill="freeze" />}
-                  {motion && d.tw && <animate attributeName="opacity" values="0.08;1;0.08" dur={d.twDur} begin={d.twBegin} repeatCount="indefinite" />}
+                <circle key={k} cx={d.x} cy={d.y} r={g.r} fill="#F4F6F8" opacity={full ? 0 : g.to === '1' ? 0.7 : 0.5}>
+                  {full && <animateTransform attributeName="transform" type="translate" from={d.from} to="0 0" dur="2.4s" begin={d.begin} fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.16 1 0.3 1" />}
+                  {full && <animate attributeName="opacity" from="0" to={g.to} dur="1.4s" begin={d.begin} fill="freeze" />}
+                  {full && d.tw && <animate attributeName="opacity" values="0.08;1;0.08" dur={d.twDur} begin={d.twBegin} repeatCount="indefinite" />}
                 </circle>
               ))}
             </g>
           ))}
         </svg>
+        <div style={{ position: 'absolute', right: 40, bottom: 66, zIndex: 3, display: 'flex', alignItems: 'center', gap: 12 }}>
+          {reduced && calm && <span style={{ fontSize: 12, opacity: 0.85, maxWidth: 210, textAlign: 'right', lineHeight: 1.3 }}>Showing a calmer version because your device asks for reduced motion.</span>}
+          <button type="button" onClick={onMotionClick} aria-pressed={full} style={{ minHeight: 40, padding: '0 16px', border: '1.5px solid #F4F6F8', background: 'transparent', color: '#F4F6F8', fontSize: 13, fontWeight: 600, cursor: 'pointer', borderRadius: 99 }}>{full ? 'Pause animation' : calm ? 'Play full animation' : 'Play animation'}</button>
+        </div>
         <nav style={{ position: 'relative', zIndex: 2, display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center', justifyContent: 'space-between', ...wrap, padding: '18px 40px 0' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 22, fontSize: 15, fontWeight: 600 }}>
             {CARDS.map((c, i) => <button key={c[1]} type="button" onClick={() => go(i)} style={{ minHeight: 44, padding: 0, border: 0, background: 'transparent', color: 'inherit', font: 'inherit', cursor: 'pointer' }}>{i === 0 ? c[1] + ' ' + year : c[1]}</button>)}
