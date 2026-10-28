@@ -5,8 +5,9 @@ name: Daily funding update
 
 on:
   schedule:
-    - cron: '30 8 * * 1-5'    # 08:30 UTC, Monday to Friday (the newsletter goes out around 07:00 UTC)
-    - cron: '30 12 * * 1-5'   # a second try the same day, in case it was late. Safe: nothing is ever added twice
+    - cron: '30 9 * * 1-5'    # 09:30 UTC, Monday to Friday. Issues appear between 07:00 and 14:30 UTC, so we look three times a day
+    - cron: '0 13 * * 1-5'    # 13:00 UTC
+    - cron: '30 15 * * 1-5'   # 15:30 UTC: after the latest issue we have seen. Safe to repeat: nothing is ever added twice
   workflow_dispatch:
     inputs:
       dry_run:
@@ -30,6 +31,7 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}    # optional, see pipeline/README.md
+      FEED_PROXY_URL: ${{ secrets.FEED_PROXY_URL }}            # your site's /api/substack-feed address (Substack blocks GitHub directly)
     steps:
       - uses: actions/checkout@v4
 
