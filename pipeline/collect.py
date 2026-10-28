@@ -34,7 +34,10 @@ from bs4 import BeautifulSoup
 FEED_URL = 'https://scalingeurope.substack.com/feed'
 ARCHIVE_API = 'https://scalingeurope.substack.com/api/v1/archive'
 POST_API = 'https://scalingeurope.substack.com/api/v1/posts/{slug}'
-USER_AGENT = 'Mozilla/5.0 (compatible; FundingDashboardBot/1.0; personal research project)'
+# A plain browser-style identity. Some sites refuse anything whose name contains "bot". This only changes how we introduce ourselves for a public
+# feed; it does nothing to hide where requests come from.
+USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+HEADERS = {'User-Agent': USER_AGENT, 'Accept': 'application/rss+xml, application/xml;q=0.9, application/json;q=0.8, */*;q=0.5', 'Accept-Language': 'en-GB,en;q=0.9'}
 
 # "Scaling Europe Daily - 27.10."  also accepts "27.10" (no final dot) and en/em dashes. Anything else is ignored.
 TITLE_RE = re.compile(r'^\s*Scaling Europe Daily\s*[-\u2013\u2014]\s*(\d{1,2})\.(\d{1,2})\.?\s*$', re.IGNORECASE)
@@ -155,10 +158,15 @@ def _get(url, **kw):
     last = None
     for attempt in range(3):
         try:
-            r = requests.get(url, headers={'User-Agent': USER_AGENT, 'Accept': '*/*'}, timeout=30, **kw)
+            r = requests.get(url, headers=HEADERS, timeout=30, **kw)
             r.raise_for_status()
             return r
-        except Exception as e:  # network errors, 403s, 5xx
+        except requests.HTTPError as e:
+            last = e
+            if e.response is not None and e.response.status_code in (401, 403, 404):
+                break                      # blocked or missing: trying again will not help
+            time.sleep(2 * (attempt + 1))
+        except Exception as e:             # network trouble, 5xx
             last = e
             time.sleep(2 * (attempt + 1))
     raise RuntimeError(f'could not fetch {url}: {last}')

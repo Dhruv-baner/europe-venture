@@ -168,5 +168,6 @@ def run(root, today, collect_code, process_code, runner, dry=False, repo='', bra
         out['alert'] = sync_issue(runner, ALERT_LABEL, ALERT_TITLE, wanted_alert, 'D93F0B', 'The funding pipeline needs attention', dry)
     except Exception as e:  # issues disabled, no permission, gh missing: never fail the run for this
         print(f'WARNING: could not update GitHub issues: {e}')
-    print(f"Notify: status={out['status']} | review issue={out['review']} ({len(held)} held) | alert issue={out['alert']}" + (f' | reasons: {len(reasons)}' if reasons else ''))
+    shown = {k: (f'would be {v}' if dry and v in ('created', 'updated', 'closed') else v) for k, v in out.items()}
+    print(f"Notify: status={shown['status']} | review issue={shown['review']} ({len(held)} held) | alert issue={shown['alert']}" + (f' | reasons: {len(reasons)}' if reasons else '') + (' (dry run: no issue is really opened)' if dry else ''))
     return out, reasons
