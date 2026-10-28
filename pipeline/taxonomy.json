@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "principle": "Label by what the customer buys, not the technology used. 'AI' in a description does not make a company software.",
+  "categories": {
+    "AI Infra": {"definition": "Companies selling the AI stack itself: models, compute, or tools for builders.", "subs": {"Models":"foundation/frontier model labs","Compute":"GPU clouds, AI data centres, inference-as-a-service","Dev Tools":"developer tools, testing, orchestration, devops, app builders","Data":"databases, vector search, data platforms, MLOps, data quality"}},
+    "Enterprise": {"definition": "Horizontal business software, including AI agents sold to companies.", "subs": {"Agents":"horizontal AI agents and workflow automation","Sales":"sales, marketing, customer support/CX software","HR":"recruiting, workforce, learning-for-work, benefits software","Legal":"legal tech, compliance and regulatory software","Productivity":"collaboration, analytics, knowledge, other horizontal software"}},
+    "Industry": {"definition": "Software and platforms built for a specific non-tech industry.", "subs": {"Construction":"construction, engineering, architecture","Industrial":"manufacturing, logistics, supply chain, aviation, maritime","Retail":"retail, hospitality, restaurants, travel software","Property":"real estate, proptech, property management","Public":"public sector, govtech, utilities software"}},
+    "Fintech": {"definition": "Companies that move, lend, insure or invest money, plus software built for finance teams.", "subs": {"Payments":"payments, banking infrastructure, cards, remittance","Lending":"lending, credit, working capital, BNPL","Insurance":"insurtech","Wealth":"investing, wealth, trading, crypto, tokenisation","Back-office":"accounting, tax, procurement, spend, planning software for finance teams"}},
+    "Health": {"definition": "Therapeutics, medical devices, diagnostics and digital health.", "subs": {"Biotech":"therapeutics, drug developers, cell/gene therapy","Medtech":"medical devices, diagnostics, surgical, imaging hardware","Digital":"digital health, care delivery, health software, wellbeing","Drug Discovery":"AI drug discovery, lab tools, bio platforms for pharma"}},
+    "Climate": {"definition": "Energy, mobility, materials and food/agri companies with a sustainability or physical-economy core.", "subs": {"Energy":"generation, storage, batteries, nuclear, hydrogen, carbon","Grid":"grid software, virtual power plants, EV charging, energy retail","Mobility":"EVs, e-bikes, rail, freight, micromobility, aviation","Materials":"recycling, biomaterials, plastics alternatives, construction materials","Agrifood":"agtech, alt-protein, food production and food tech"}},
+    "Deep Tech": {"definition": "Frontier hardware and science: quantum, chips, robotics.", "subs": {"Quantum":"quantum computing hardware/software/sensing","Chips":"semiconductors, photonics, AI chips (unless sold as compute service)","Robotics":"robots, autonomy, physical AI","Hardware":"other frontier hardware, sensors, advanced materials-as-hardware"}},
+    "Defence & Space": {"definition": "Defence systems and commercial/military space.", "subs": {"Defence":"defence systems, munitions, defence software","Drones":"drones, counter-drone, UAV","Launch":"launch vehicles, propulsion, in-space logistics","Satellites":"satellite manufacturing, constellations, connectivity","Earth Data":"earth observation, space data, space domain awareness"}},
+    "Cyber": {"definition": "Security, identity and trust.", "subs": {"Threat":"detection, response, vulnerability, network/app security","AI Security":"securing AI systems and agents, deepfake detection","Identity":"identity, authentication, fraud prevention","Privacy":"privacy, data protection, confidential computing"}},
+    "Consumer": {"definition": "Products sold to individuals: apps, media, games, learning, brands.", "subs": {"Apps":"consumer apps, marketplaces, travel/mobility apps, social","Media":"creative, music, video, entertainment, creator tools","Games":"gaming, game studios, sportsbook/casino","Education":"edtech, learning platforms, tutoring","Brands":"consumer goods, food/drink brands, physical consumer products"}}
+  },
+  "tags": {"customer": ["B2B","B2C","B2G"], "ai_role": ["Native","Enabled","None"]},
+  "rules": [
+    "Label by what the customer buys, not the technology used.",
+    "AI in a description does not make a company software.",
+    "AI chips -> Deep Tech/Chips unless the company sells compute as a service (then AI Infra/Compute).",
+    "Anything that moves, lends or insures money -> Fintech. Software for finance teams -> Fintech/Back-office.",
+    "Alt-protein and food production -> Climate/Agrifood; consumer food brands -> Consumer/Brands.",
+    "Satellites and launch are Defence & Space even when commercial.",
+    "Biotech making industrial materials/enzymes -> Climate/Materials; therapeutics -> Health/Biotech."
+  ]
+}
