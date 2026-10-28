@@ -116,10 +116,11 @@ def _parse_entry(el):
         source = links[-1]['href']
     text = re.sub(r'\s*Read more(?:\s+here)?\s*\.?\s*$', '', _text(el), flags=re.IGNORECASE).strip()
     text = re.sub(r'\s+([.,;:])', r'\1', text)
+    text = re.sub(r'^[\s\u2022\u00b7\u25aa\u25cf*\-\u2013\u2014]+', '', text)       # leading bullet characters
     company = ''
     bold = el.find(['strong', 'b'])
     if bold:
-        company = _text(bold)
+        company = re.sub(r'^[\s\u2022\u00b7\u25aa\u25cf*\-\u2013\u2014]+', '', _text(bold))
     if not company:
         m = re.match(r'^(.+?)\s+(?:' + VERBS + r')\b', text, flags=re.IGNORECASE)
         company = m.group(1).strip() if m else ''
@@ -201,19 +202,28 @@ def issues_from_archive_api(limit=30):
     return out
 
 
-def fetch_issues(feed_file=None, feed_url=FEED_URL):
-    """Feed first; if it fails or has no Daily issues, use the archive API. Returns (issues, how)."""
+def fetch_issues(feed_file=None, feed_urls=None):
+    """Tries, in order: a saved file (tests), each feed address given (your own proxy first, then Substack directly), then the archive API.
+    Returns (issues, how)."""
     problems = []
-    try:
-        xml = Path(feed_file).read_bytes() if feed_file else _get(feed_url).content
-        issues = issues_from_feed_xml(xml)
-        if any(is_daily_title(i['title']) for i in issues):
-            return issues, 'feed'
-        problems.append('feed had no Daily issues')
-    except Exception as e:
-        problems.append(f'feed failed: {e}')
     if feed_file:
+        try:
+            issues = issues_from_feed_xml(Path(feed_file).read_bytes())
+            if any(is_daily_title(i['title']) for i in issues):
+                return issues, 'feed'
+            problems.append('feed had no Daily issues')
+        except Exception as e:
+            problems.append(f'feed failed: {e}')
         raise RuntimeError('; '.join(problems))
+    for url in [u for u in (feed_urls or [FEED_URL]) if u]:
+        label = 'feed' if url == FEED_URL else 'feed via your proxy'
+        try:
+            issues = issues_from_feed_xml(_get(url).content)
+            if any(is_daily_title(i['title']) for i in issues):
+                return issues, label
+            problems.append(f'{label} had no Daily issues')
+        except Exception as e:
+            problems.append(f'{label} failed: {e}')
     try:
         issues = issues_from_archive_api()
         if any(is_daily_title(i['title']) for i in issues):
@@ -243,10 +253,12 @@ def load_ids(path: Path):
 
 def run(args) -> int:
     out_path, issues_path = Path(args.out), Path(args.issues_log)
+    proxy = (getattr(args, 'feed_urls', None) or [None])[0]
+    print(f"Sources, in order: your proxy ({proxy if proxy else 'NOT SET: the FEED_PROXY_URL secret was not passed in'}), then Substack directly, then Substack's archive.")
     today = args.today or datetime.now(timezone.utc).date()
     since = today - timedelta(days=args.since_days)
     try:
-        issues, how = fetch_issues(args.feed_file, args.feed_url)
+        issues, how = fetch_issues(args.feed_file, args.feed_urls)
     except RuntimeError as e:
         print(f'ERROR (exit 2): {e}')
         return 2
@@ -342,7 +354,9 @@ def main(argv=None):
     ap.add_argument('--max-gap-weekdays', type=int, default=2, help='alert if the newest Daily issue is older than this')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--today', type=lambda s: date.fromisoformat(s), help='override today (for tests)')
-    return run(ap.parse_args(argv))
+    a = ap.parse_args(argv)
+    a.feed_urls = [os.environ.get('FEED_PROXY_URL', '').strip() or None, a.feed_url]     # your own proxy first, if you set one up
+    return run(a)
 
 
 if __name__ == '__main__':
