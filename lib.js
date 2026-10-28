@@ -62,10 +62,13 @@ export function prepare(rows, year) {
   const txt = cats.map((c, i) => (i < TXT.length ? TXT[i] : '#FFFFFF'));
   const R = use.map((r) => {
     const ci = cats.indexOf(r.category || 'Unclassified');
-    return { name: r.name, c: countries.indexOf(primaryCountry(r.country)), cat: ci, sub: subIdx(ci, r.sub), st: stageOf(r.round), amt: r.amount ? Math.round(r.amount / 1e4) / 100 : -1,
-      m: months.indexOf(r.month), blurb: (r.blurb || r.desc || '').slice(0, 90), investors: r.investors || '', url: r.url || '' };
+    const c = countries.indexOf(primaryCountry(r.country));
+    // rows of the same company share a key; `company_key` (set by the update pipeline) separates two different companies that share a name
+    return { name: r.name, c, cat: ci, sub: subIdx(ci, r.sub), st: stageOf(r.round), amt: r.amount ? Math.round(r.amount / 1e4) / 100 : -1,
+      m: months.indexOf(r.month), blurb: (r.blurb || r.desc || '').slice(0, 90), investors: r.investors || '', url: r.url || '',
+      key: r.company_key || (r.name === 'Birdsview' ? r.name + '|' + c : r.name) };
   });
-  const keyOf = (r) => (r.name === 'Birdsview' ? r.name + '|' + r.c : r.name);
+  const keyOf = (r) => r.key;
   const O = {}; R.forEach((r) => { (O[keyOf(r)] = O[keyOf(r)] || []).push([r.st, r.amt, r.m]); });
   Object.keys(O).forEach((k) => { if (O[k].length < 2) delete O[k]; });
   return { year, R, cats, subsG, countries, months, colors, txt, O, keyOf };

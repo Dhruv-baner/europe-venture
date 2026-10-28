@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import ROUNDS from './rounds.json';
 import GEO from './europe-map.json';
+import STATUS from './status.json';
 import {
   STAGES, MON, FIVE, AMT_STEPS, BANDS, sum, fmt, fmtStep, fmtAxis, median, yearsIn, prepare, monName, othersText, parseQuery, emptyFilters, makeFilter,
   axisFor, arcPath, buildTreemap,
@@ -14,6 +15,7 @@ const label = { ...mono(12), fontWeight: 500, letterSpacing: '0.14em', textTrans
 const wrap = { maxWidth: 1320, margin: '0 auto', padding: '0 40px', boxSizing: 'border-box' };
 const selectStyle = { flex: 1, minWidth: 0, minHeight: 42, border: `1.5px solid ${INK}`, background: CARD, fontSize: 14, padding: '0 8px', color: INK };
 const CARDS = [['01', 'The state of'], ['02', 'Analytics'], ['03', 'Funding map']];
+const fmtDay = (iso) => new Date(iso + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
 const Pill = ({ on, onClick, children, size = 36, extra }) => (
   <button type="button" onClick={onClick} aria-pressed={on} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, minHeight: size, padding: '0 12px', border: `1.5px solid ${INK}`, background: on ? INK : CARD, color: on ? BG : INK, fontSize: 13, fontWeight: 500, cursor: 'pointer', borderRadius: 99, ...extra }}>{children}</button>
@@ -199,6 +201,7 @@ function Dashboard({ D, years, year, setYear }) {
         <div id="top" style={{ position: 'relative', zIndex: 2, ...wrap, padding: '74px 40px 110px' }}>
           <h1 style={{ margin: 0, fontFamily: "'Montserrat', sans-serif", fontWeight: 800, fontSize: 'clamp(38px,7.6vw,108px)', lineHeight: 1, letterSpacing: '-0.035em' }}>The Funding<br />Dashboard</h1>
           <p style={{ margin: '28px 0 0', maxWidth: 620, fontSize: 21, lineHeight: 1.45, fontWeight: 500 }}>{nearest.toLocaleString('en-GB')}+ biggest funding rounds tracked across Europe in {year}</p>
+          {STATUS && STATUS.updated && <p style={{ margin: '14px 0 0', ...mono(13), letterSpacing: '0.08em', textTransform: 'uppercase', opacity: 0.85 }}>Last updated {fmtDay(STATUS.updated)}</p>}
         </div>
       </header>
 
