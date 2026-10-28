@@ -1,0 +1,35 @@
+[
+ {
+  "name": "22one",
+  "desc": "AI tools helping police forces work more efficiently",
+  "month": "2026-10",
+  "country": "Europe (unspecified)",
+  "amount": null,
+  "round": "Undisclosed/Other",
+  "investors": "",
+  "sector": "AI and Software",
+  "use": "",
+  "url": "https://techfundingnews.com/22one-stealth-police-ai-startup-400m-valuation-sequoia-lux/",
+  "category": "Industry",
+  "sub": "Public",
+  "customer": "",
+  "ai": "",
+  "conf": "review",
+  "blurb": "AI tools helping police forces work more efficiently",
+  "blurb_src": "llm",
+  "country_src": "unknown",
+  "amount_native": null,
+  "currency": null,
+  "fx_rate": null,
+  "fx_final": null,
+  "source_entry": "7e4aec14ff7147a2",
+  "issue_date": "2026-10-28",
+  "flags": [
+   "amount_vague",
+   "unconfirmed",
+   "round_guessed",
+   "country_unknown"
+  ],
+  "approved": false
+ }
+]
