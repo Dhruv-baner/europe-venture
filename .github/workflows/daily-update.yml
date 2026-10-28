@@ -1,0 +1,76 @@
+name: Daily funding update
+
+# Every weekday: read the newsletter, turn new funding entries into dashboard rows, save them, and let the site redeploy.
+# Start it by hand first (Actions tab > Daily funding update > Run workflow) with "dry run" ticked.
+
+on:
+  schedule:
+    - cron: '30 8 * * 1-5'    # 08:30 UTC, Monday to Friday (the newsletter goes out around 07:00 UTC)
+    - cron: '30 12 * * 1-5'   # a second try the same day, in case it was late. Safe: nothing is ever added twice
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run: read the live newsletter and show what would be published, but save and report nothing'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write      # to save rounds.json and the data files
+  issues: write        # to open the "waiting for review" and "needs attention" issues
+
+concurrency:
+  group: daily-funding-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}    # optional, see pipeline/README.md
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      - name: Install
+        run: pip install -r pipeline/requirements.txt
+
+      - name: Check the logic still works (tests)
+        run: python -m pytest -q pipeline/tests
+
+      - name: Run the daily update
+        id: daily
+        run: |
+          set +e
+          python pipeline/daily.py ${{ inputs.dry_run && '--dry-run' || '' }}
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Save (commit and push)
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "funding-dashboard-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add rounds.json status.json data
+          if ! git diff --cached --quiet; then
+            git commit -m "Daily update $(date -u +%F)"
+            git pull --rebase --autostash
+            git push
+            echo "SAVED=yes" >> "$GITHUB_ENV"
+          fi
+
+      - name: Redeploy the site (only if you set up a deploy hook)
+        if: ${{ env.SAVED == 'yes' && env.VERCEL_DEPLOY_HOOK != '' }}
+        run: curl -fsS -X POST "$VERCEL_DEPLOY_HOOK"
+
+      - name: Turn the run red if a stage failed
+        if: ${{ steps.daily.outputs.code != '0' }}
+        run: |
+          echo "A stage failed (exit code ${{ steps.daily.outputs.code }}). See the log above, and the 'Funding pipeline needs attention' issue."
+          exit 1
