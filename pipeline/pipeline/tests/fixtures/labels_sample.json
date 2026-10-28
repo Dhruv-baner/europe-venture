@@ -1,0 +1,74 @@
+{
+ "nevis": {
+  "category": "Fintech",
+  "sub": "Wealth",
+  "blurb": "AI agents for wealth advisers",
+  "country": null,
+  "country_confidence": 0.0,
+  "confidence": 0.9
+ },
+ "cognitive credit": {
+  "category": "Fintech",
+  "sub": "Back-office",
+  "blurb": "AI software for credit analysis",
+  "country": null,
+  "country_confidence": 0.0,
+  "confidence": 0.85
+ },
+ "phononic vibes": {
+  "category": "Deep Tech",
+  "sub": "Hardware",
+  "blurb": "Noise and vibration control technology",
+  "country": null,
+  "country_confidence": 0.0,
+  "confidence": 0.8
+ },
+ "nous": {
+  "category": "Consumer",
+  "sub": "Apps",
+  "blurb": "AI agent for household bills",
+  "country": null,
+  "country_confidence": 0.0,
+  "confidence": 0.9
+ },
+ "adsilico": {
+  "category": "Health",
+  "sub": "Medtech",
+  "blurb": "Virtual heart models for medical devices",
+  "country": "United Kingdom",
+  "country_confidence": 0.9,
+  "confidence": 0.9
+ },
+ "volare": {
+  "category": "Climate",
+  "sub": "Agrifood",
+  "blurb": "Insect protein production",
+  "country": null,
+  "country_confidence": 0.0,
+  "confidence": 0.9
+ },
+ "sonexos": {
+  "category": "Deep Tech",
+  "sub": "Hardware",
+  "blurb": "Low-frequency noise reduction technology",
+  "country": null,
+  "country_confidence": 0.0,
+  "confidence": 0.4
+ },
+ "epoch": {
+  "category": "Enterprise",
+  "sub": "Legal",
+  "blurb": "Deforestation rule compliance for small importers",
+  "country": null,
+  "country_confidence": 0.0,
+  "confidence": 0.85
+ },
+ "exampleco": {
+  "category": "Enterprise",
+  "sub": "Productivity",
+  "blurb": "Test software for example customers",
+  "country": null,
+  "country_confidence": 0.0,
+  "confidence": 0.9
+ }
+}
