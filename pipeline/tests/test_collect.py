@@ -141,3 +141,25 @@ def test_falls_back_to_archive_api_when_feed_fails(monkeypatch, tmp_path):
 def test_exit_2_when_feed_and_archive_both_fail(monkeypatch, tmp_path):
     monkeypatch.setattr(collect, '_get', lambda url, **kw: (_ for _ in ()).throw(RuntimeError('blocked')))
     assert collect.main(['--out', str(tmp_path / 'e.jsonl'), '--issues-log', str(tmp_path / 'i.json')]) == 2
+
+
+# ---------- a blocked request is not retried, and we do not call ourselves a bot ----------
+def test_403_is_not_retried_and_the_name_is_browser_like(monkeypatch):
+    import requests
+    calls = []
+
+    class Resp:
+        status_code = 403
+        def raise_for_status(self):
+            raise requests.HTTPError('403 Client Error: Forbidden', response=self)
+
+    def fake_get(url, headers=None, **kw):
+        calls.append(headers)
+        return Resp()
+
+    monkeypatch.setattr(requests, 'get', fake_get)
+    monkeypatch.setattr(collect.time, 'sleep', lambda s: None)
+    import pytest as _p
+    with _p.raises(RuntimeError, match='403'):
+        collect._get('https://example.com/feed')
+    assert len(calls) == 1 and 'bot' not in calls[0]['User-Agent'].lower() and 'Mozilla' in calls[0]['User-Agent']
