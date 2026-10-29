@@ -21,3 +21,5 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Cortas | 2026-10 | country unknown |
 | Agora Labs | 2026-10 | country unknown |
 | Impress | 2026-10 | country unknown |
+| Magic Vision | 2026-10 | country unknown |
+| Autofixer | 2026-10 | country unknown |
