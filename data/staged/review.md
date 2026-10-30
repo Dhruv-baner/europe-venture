@@ -23,3 +23,14 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Impress | 2026-10 | country unknown |
 | Magic Vision | 2026-10 | country unknown |
 | Autofixer | 2026-10 | country unknown |
+| StrollMe | 2026-10 | country unknown |
+| MuRay | 2026-10 | country unknown |
+| Pixel Systems | 2026-10 | country unknown |
+| FLTRD | 2026-10 | country unknown |
+| i23 | 2026-10 | country unknown |
+| Fronted | 2026-10 | country unknown |
+| KineDB | 2026-10 | country unknown |
+| VUSE XR | 2026-10 | country unknown |
+| Braid | 2026-10 | country unknown |
+| Ravical | 2026-10 | country unknown |
+| ALLOX | 2026-10 | country unknown |
