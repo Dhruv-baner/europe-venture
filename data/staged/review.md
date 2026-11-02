@@ -34,3 +34,6 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Braid | 2026-10 | country unknown |
 | Ravical | 2026-10 | country unknown |
 | ALLOX | 2026-10 | country unknown |
+| PaperFoam | 2026-10 | country unknown |
+| Ares Intelligence | 2026-11 | country unknown |
+| Prismus | 2026-10 | country unknown |
