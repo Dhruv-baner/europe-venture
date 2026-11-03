@@ -31,5 +31,36 @@
    "country_unknown"
   ],
   "approved": false
+ },
+ {
+  "name": "LO:TECH",
+  "desc": "24/7 trading infrastructure and open offices in New York and",
+  "month": "2026-11",
+  "country": "United Kingdom",
+  "amount": 8948760,
+  "round": "Series A",
+  "investors": "",
+  "sector": "Fintech",
+  "use": "",
+  "url": "https://tech.eu/2026/11/02/london-based-lotech-lands-12m-series-a-led-by-mmc/",
+  "category": "Fintech",
+  "sub": "Payments",
+  "customer": "",
+  "ai": "",
+  "conf": "review",
+  "blurb": "24/7 trading infrastructure and open offices in New York and",
+  "blurb_src": "rules",
+  "country_src": "url",
+  "amount_native": 12000000.0,
+  "currency": "USD",
+  "fx_rate": 0.74573,
+  "fx_final": false,
+  "source_entry": "c8a6360be58b1f13",
+  "issue_date": "2026-11-03",
+  "flags": [
+   "fx_provisional",
+   "label_fallback"
+  ],
+  "approved": false
  }
 ]

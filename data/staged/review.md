@@ -7,6 +7,7 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Company | Month | Amount (£) | Round | Country | Sector | Why held | Source |
 |---|---|---|---|---|---|---|---|
 | 22one | 2026-10 | – | Undisclosed/Other | Europe (unspecified) | Industry › Public | unconfirmed | https://techfundingnews.com/22one-stealth-police-ai-startup-400m-valuation-sequoia-lux/ |
+| LO:TECH | 2026-11 | 8,948,760 | Series A | United Kingdom | Fintech › Payments | label_fallback | https://tech.eu/2026/11/02/london-based-lotech-lands-12m-series-a-led-by-mmc/ |
 
 ## Published, but worth a glance
 
@@ -37,3 +38,7 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | PaperFoam | 2026-10 | country unknown |
 | Ares Intelligence | 2026-11 | country unknown |
 | Prismus | 2026-10 | country unknown |
+| Sortrace | 2026-11 | country unknown |
+| Marble Cognition | 2026-11 | shares a name with another company |
+| Roleo | 2026-11 | country unknown |
+| Hypersonica | 2026-11 | country unknown |
