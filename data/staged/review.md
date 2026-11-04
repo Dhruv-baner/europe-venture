@@ -8,6 +8,9 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 |---|---|---|---|---|---|---|---|
 | 22one | 2026-10 | – | Undisclosed/Other | Europe (unspecified) | Industry › Public | unconfirmed | https://techfundingnews.com/22one-stealth-police-ai-startup-400m-valuation-sequoia-lux/ |
 | LO:TECH | 2026-11 | 8,948,760 | Series A | United Kingdom | Fintech › Payments | label_fallback | https://tech.eu/2026/11/02/london-based-lotech-lands-12m-series-a-led-by-mmc/ |
+| Apolarion | 2026-11 | 136,849 | Seed | Europe (unspecified) | Enterprise › Productivity | label_fallback | https://tech.eu/2026/11/03/venture-kick-backs-apolarion-with-eur164k-to-advance-plasma-based-seed-treatment/ |
+| Granter | 2026-11 | 1,335,112 | Undisclosed/Other | Portugal | Enterprise › Productivity | label_fallback | https://tech.eu/2026/11/03/portuguese-ai-startup-granter-bags-eur16m-to-expand-across-europe/ |
+| Viridi | 2026-11 | 2,169,557 | Undisclosed/Other | Europe (unspecified) | Enterprise › Productivity | label_fallback | https://www.eu-startups.com/2026/11/turning-pollution-into-everyday-products-southamptons-virdi-raises-e2-6-million-to-transform-waste/ |
 
 ## Published, but worth a glance
 
@@ -42,3 +45,8 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Marble Cognition | 2026-11 | shares a name with another company |
 | Roleo | 2026-11 | country unknown |
 | Hypersonica | 2026-11 | country unknown |
+| Vitroscope | 2026-11 | country unknown |
+| CyberKord | 2026-11 | country unknown |
+| Conlio | 2026-11 | country unknown |
+| Tumbleweed | 2026-11 | country unknown |
+| Quint Computing | 2026-11 | country unknown |
