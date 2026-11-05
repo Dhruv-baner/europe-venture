@@ -50,3 +50,10 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Conlio | 2026-11 | country unknown |
 | Tumbleweed | 2026-11 | country unknown |
 | Quint Computing | 2026-11 | country unknown |
+| Lazzaro One | 2026-11 | country unknown |
+| Pliant | 2026-11 | country unknown |
+| Return | 2026-11 | country unknown |
+| Hardt Hyperloop | 2026-11 | amount not disclosed |
+| Titan OS | 2026-11 | country unknown |
+| bit.bio | 2026-11 | country unknown |
+| Supa | 2026-11 | country unknown |
