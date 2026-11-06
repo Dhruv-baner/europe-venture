@@ -159,5 +159,37 @@
    "country_unknown"
   ],
   "approved": false
+ },
+ {
+  "name": "MyPholyo",
+  "desc": "Platform for people with portfolio careers beyond one job title",
+  "month": "2026-11",
+  "country": "Europe (unspecified)",
+  "amount": 500000,
+  "round": "Undisclosed/Other",
+  "investors": "",
+  "sector": "Consumer",
+  "use": "",
+  "url": "https://theportfolio-method.com/",
+  "category": "Consumer",
+  "sub": "Apps",
+  "customer": "",
+  "ai": "",
+  "conf": "review",
+  "blurb": "Platform for people with portfolio careers beyond one job title",
+  "blurb_src": "llm",
+  "country_src": "unknown",
+  "amount_native": 500000.0,
+  "currency": "GBP",
+  "fx_rate": 1.0,
+  "fx_final": true,
+  "source_entry": "18411c773903ffbe",
+  "issue_date": "2026-11-06",
+  "flags": [
+   "round_guessed",
+   "label_low_confidence",
+   "country_unknown"
+  ],
+  "approved": false
  }
 ]

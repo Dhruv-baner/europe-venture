@@ -11,6 +11,7 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Apolarion | 2026-11 | 136,849 | Seed | Europe (unspecified) | Enterprise › Productivity | label_fallback | https://tech.eu/2026/11/03/venture-kick-backs-apolarion-with-eur164k-to-advance-plasma-based-seed-treatment/ |
 | Granter | 2026-11 | 1,335,112 | Undisclosed/Other | Portugal | Enterprise › Productivity | label_fallback | https://tech.eu/2026/11/03/portuguese-ai-startup-granter-bags-eur16m-to-expand-across-europe/ |
 | Viridi | 2026-11 | 2,169,557 | Undisclosed/Other | Europe (unspecified) | Enterprise › Productivity | label_fallback | https://www.eu-startups.com/2026/11/turning-pollution-into-everyday-products-southamptons-virdi-raises-e2-6-million-to-transform-waste/ |
+| MyPholyo | 2026-11 | 500,000 | Undisclosed/Other | Europe (unspecified) | Consumer › Apps | label_low_confidence | https://theportfolio-method.com/ |
 
 ## Published, but worth a glance
 
@@ -57,3 +58,7 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Titan OS | 2026-11 | country unknown |
 | bit.bio | 2026-11 | country unknown |
 | Supa | 2026-11 | country unknown |
+| Nayara | 2026-11 | country unknown |
+| Mindmax | 2026-11 | country unknown |
+| Claimlane | 2026-11 | country unknown |
+| Potential Sciences | 2026-11 | country unknown, amount not disclosed |
