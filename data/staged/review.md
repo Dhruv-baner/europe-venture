@@ -12,6 +12,8 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Granter | 2026-11 | 1,335,112 | Undisclosed/Other | Portugal | Enterprise › Productivity | label_fallback | https://tech.eu/2026/11/03/portuguese-ai-startup-granter-bags-eur16m-to-expand-across-europe/ |
 | Viridi | 2026-11 | 2,169,557 | Undisclosed/Other | Europe (unspecified) | Enterprise › Productivity | label_fallback | https://www.eu-startups.com/2026/11/turning-pollution-into-everyday-products-southamptons-virdi-raises-e2-6-million-to-transform-waste/ |
 | MyPholyo | 2026-11 | 500,000 | Undisclosed/Other | Europe (unspecified) | Consumer › Apps | label_low_confidence | https://theportfolio-method.com/ |
+| TEKEVER | 2026-11 | 10,846,017 | Series D | Portugal | Defence & Space › Drones | possible_duplicate | https://www.eu-startups.com/2026/11/defencetech-unicorn-tekever-strengthens-nordic-ambitions-amid-e520-million-funding-round/ |
+| EOS-X Space | 2026-11 | 91,773,990 | Undisclosed/Other | Europe (unspecified) | Defence & Space › Launch | label_low_confidence | https://techfundingnews.com/eos-x-space-110m-raise-1-2b-valuation-balloon-flights/ |
 
 ## Published, but worth a glance
 
@@ -62,3 +64,6 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Mindmax | 2026-11 | country unknown |
 | Claimlane | 2026-11 | country unknown |
 | Potential Sciences | 2026-11 | country unknown, amount not disclosed |
+| Bioliberty | 2026-11 | country unknown |
+| Candi Solar | 2026-11 | country unknown |
+| MucoLife Therapeutics | 2026-11 | country unknown |
