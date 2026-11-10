@@ -255,5 +255,38 @@
    "country_unknown"
   ],
   "approved": false
+ },
+ {
+  "name": "Memora",
+  "desc": "Platform connecting cemetery managers, gardeners and grieving families",
+  "month": "2026-11",
+  "country": "Europe (unspecified)",
+  "amount": 1418567,
+  "round": "Undisclosed/Other",
+  "investors": "",
+  "sector": "Real Estate",
+  "use": "",
+  "url": "https://www.eu-startups.com/2026/11/from-tending-graves-to-raising-e1-7-million-memora-sets-out-to-modernise-europes-cemeteries/",
+  "category": "Industry",
+  "sub": "Property",
+  "customer": "",
+  "ai": "",
+  "conf": "review",
+  "blurb": "Platform connecting cemetery managers, gardeners and grieving families",
+  "blurb_src": "llm",
+  "country_src": "unknown",
+  "amount_native": 1700000.0,
+  "currency": "EUR",
+  "fx_rate": 0.834451,
+  "fx_final": false,
+  "source_entry": "402f6c70c1b7f08f",
+  "issue_date": "2026-11-10",
+  "flags": [
+   "fx_provisional",
+   "round_guessed",
+   "label_low_confidence",
+   "country_unknown"
+  ],
+  "approved": false
  }
 ]
