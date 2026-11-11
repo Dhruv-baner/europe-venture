@@ -288,5 +288,37 @@
    "country_unknown"
   ],
   "approved": false
+ },
+ {
+  "name": "triPica",
+  "desc": "Simplify billing for energy and telecom companies across Europe",
+  "month": "2026-11",
+  "country": "France",
+  "amount": 10349573,
+  "round": "Undisclosed/Other",
+  "investors": "",
+  "sector": "Climate Tech",
+  "use": "",
+  "url": "https://www.eu-startups.com/2026/11/paris-based-tripica-raises-e12-4-million-to-simplify-billing-for-europes-evolving-energy-and-telecom-markets/",
+  "category": "Climate",
+  "sub": "Energy",
+  "customer": "",
+  "ai": "",
+  "conf": "review",
+  "blurb": "Simplify billing for energy and telecom companies across Europe",
+  "blurb_src": "rules",
+  "country_src": "url",
+  "amount_native": 12400000.0,
+  "currency": "EUR",
+  "fx_rate": 0.834643,
+  "fx_final": false,
+  "source_entry": "f6155cb6b704b2c5",
+  "issue_date": "2026-11-11",
+  "flags": [
+   "fx_provisional",
+   "round_guessed",
+   "label_fallback"
+  ],
+  "approved": false
  }
 ]

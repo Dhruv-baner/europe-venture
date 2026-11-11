@@ -15,6 +15,7 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | TEKEVER | 2026-11 | 10,846,017 | Series D | Portugal | Defence & Space › Drones | possible_duplicate | https://www.eu-startups.com/2026/11/defencetech-unicorn-tekever-strengthens-nordic-ambitions-amid-e520-million-funding-round/ |
 | EOS-X Space | 2026-11 | 91,773,990 | Undisclosed/Other | Europe (unspecified) | Defence & Space › Launch | label_low_confidence | https://techfundingnews.com/eos-x-space-110m-raise-1-2b-valuation-balloon-flights/ |
 | Memora | 2026-11 | 1,418,567 | Undisclosed/Other | Europe (unspecified) | Industry › Property | label_low_confidence | https://www.eu-startups.com/2026/11/from-tending-graves-to-raising-e1-7-million-memora-sets-out-to-modernise-europes-cemeteries/ |
+| triPica | 2026-11 | 10,349,573 | Undisclosed/Other | France | Climate › Energy | label_fallback | https://www.eu-startups.com/2026/11/paris-based-tripica-raises-e12-4-million-to-simplify-billing-for-europes-evolving-energy-and-telecom-markets/ |
 
 ## Published, but worth a glance
 
@@ -73,3 +74,14 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | SRTD Biotech | 2026-11 | country unknown |
 | Crowd Threat | 2026-11 | country unknown |
 | Onodrim Industries | 2026-11 | country unknown |
+| Zilch | 2026-11 | country unknown |
+| Light Frame | 2026-11 | country unknown |
+| Valkyrie Dynamics | 2026-11 | country unknown |
+| PORT | 2026-11 | country unknown |
+| Hedepy | 2026-11 | country unknown |
+| Tendrils Compute | 2026-11 | country unknown |
+| Numina | 2026-11 | country unknown |
+| Hiverge | 2026-11 | country unknown |
+| Agent F | 2026-11 | country unknown |
+| Ancep | 2026-11 | country unknown |
+| Danish Centre for AI Innovation | 2026-11 | country unknown |
