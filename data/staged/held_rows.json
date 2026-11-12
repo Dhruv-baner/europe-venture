@@ -320,5 +320,37 @@
    "label_fallback"
   ],
   "approved": false
+ },
+ {
+  "name": "Switchpoint Bio",
+  "desc": "Simple blood tests showing how patients respond to treatment",
+  "month": "2026-11",
+  "country": "Europe (unspecified)",
+  "amount": 3956090,
+  "round": "Pre-Seed",
+  "investors": "",
+  "sector": "Healthtech",
+  "use": "",
+  "url": "https://tech.eu/2026/11/11/why-do-some-patients-respond-to-drugs-and-others-dont-switchpoint-bio-raises-53m-to-find-out/",
+  "category": "Health",
+  "sub": "Medtech",
+  "customer": "",
+  "ai": "",
+  "conf": "review",
+  "blurb": "Simple blood tests showing how patients respond to treatment",
+  "blurb_src": "llm",
+  "country_src": "unknown",
+  "amount_native": 5300000.0,
+  "currency": "USD",
+  "fx_rate": 0.746432,
+  "fx_final": false,
+  "source_entry": "d8cfe4ae930f7302",
+  "issue_date": "2026-11-12",
+  "flags": [
+   "fx_provisional",
+   "label_low_confidence",
+   "country_unknown"
+  ],
+  "approved": false
  }
 ]

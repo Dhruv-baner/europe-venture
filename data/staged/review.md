@@ -16,6 +16,7 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | EOS-X Space | 2026-11 | 91,773,990 | Undisclosed/Other | Europe (unspecified) | Defence & Space › Launch | label_low_confidence | https://techfundingnews.com/eos-x-space-110m-raise-1-2b-valuation-balloon-flights/ |
 | Memora | 2026-11 | 1,418,567 | Undisclosed/Other | Europe (unspecified) | Industry › Property | label_low_confidence | https://www.eu-startups.com/2026/11/from-tending-graves-to-raising-e1-7-million-memora-sets-out-to-modernise-europes-cemeteries/ |
 | triPica | 2026-11 | 10,349,573 | Undisclosed/Other | France | Climate › Energy | label_fallback | https://www.eu-startups.com/2026/11/paris-based-tripica-raises-e12-4-million-to-simplify-billing-for-europes-evolving-energy-and-telecom-markets/ |
+| Switchpoint Bio | 2026-11 | 3,956,090 | Pre-Seed | Europe (unspecified) | Health › Medtech | label_low_confidence | https://tech.eu/2026/11/11/why-do-some-patients-respond-to-drugs-and-others-dont-switchpoint-bio-raises-53m-to-find-out/ |
 
 ## Published, but worth a glance
 
@@ -85,3 +86,6 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Agent F | 2026-11 | country unknown |
 | Ancep | 2026-11 | country unknown |
 | Danish Centre for AI Innovation | 2026-11 | country unknown |
+| Tano | 2026-11 | country unknown |
+| Planky | 2026-11 | country unknown |
+| Anorak | 2026-11 | country unknown |
