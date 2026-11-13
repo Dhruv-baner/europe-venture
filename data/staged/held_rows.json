@@ -352,5 +352,38 @@
    "country_unknown"
   ],
   "approved": false
+ },
+ {
+  "name": "Mondrio",
+  "desc": "AI agents that set prices for B2B companies",
+  "month": "2026-11",
+  "country": "Europe (unspecified)",
+  "amount": 2802398,
+  "round": "Undisclosed/Other",
+  "investors": "",
+  "sector": "AI and Software",
+  "use": "",
+  "url": "https://techfundingnews.com/mondrio-3-75m-seed-ai-pricing-agents/",
+  "category": "Enterprise",
+  "sub": "Productivity",
+  "customer": "",
+  "ai": "",
+  "conf": "review",
+  "blurb": "AI agents that set prices for B2B companies",
+  "blurb_src": "rules",
+  "country_src": "unknown",
+  "amount_native": 3750000.0,
+  "currency": "USD",
+  "fx_rate": 0.747306,
+  "fx_final": false,
+  "source_entry": "fc6a94ec471a3d64",
+  "issue_date": "2026-11-13",
+  "flags": [
+   "fx_provisional",
+   "round_guessed",
+   "label_fallback",
+   "country_unknown"
+  ],
+  "approved": false
  }
 ]

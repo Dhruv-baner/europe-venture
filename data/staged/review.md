@@ -17,6 +17,7 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Memora | 2026-11 | 1,418,567 | Undisclosed/Other | Europe (unspecified) | Industry › Property | label_low_confidence | https://www.eu-startups.com/2026/11/from-tending-graves-to-raising-e1-7-million-memora-sets-out-to-modernise-europes-cemeteries/ |
 | triPica | 2026-11 | 10,349,573 | Undisclosed/Other | France | Climate › Energy | label_fallback | https://www.eu-startups.com/2026/11/paris-based-tripica-raises-e12-4-million-to-simplify-billing-for-europes-evolving-energy-and-telecom-markets/ |
 | Switchpoint Bio | 2026-11 | 3,956,090 | Pre-Seed | Europe (unspecified) | Health › Medtech | label_low_confidence | https://tech.eu/2026/11/11/why-do-some-patients-respond-to-drugs-and-others-dont-switchpoint-bio-raises-53m-to-find-out/ |
+| Mondrio | 2026-11 | 2,802,398 | Undisclosed/Other | Europe (unspecified) | Enterprise › Productivity | label_fallback | https://techfundingnews.com/mondrio-3-75m-seed-ai-pricing-agents/ |
 
 ## Published, but worth a glance
 
@@ -89,3 +90,11 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Tano | 2026-11 | country unknown |
 | Planky | 2026-11 | country unknown |
 | Anorak | 2026-11 | country unknown |
+| Nebuly | 2026-11 | country unknown |
+| Biomatter | 2026-11 | country unknown |
+| SE3 | 2026-11 | country unknown |
+| Agile Robots | 2026-11 | country unknown |
+| UFORCE | 2026-11 | shares a name with another company |
+| Orakl Oncology | 2026-11 | country unknown |
+| Griffin | 2026-11 | country unknown |
+| Gama | 2026-11 | country unknown |
