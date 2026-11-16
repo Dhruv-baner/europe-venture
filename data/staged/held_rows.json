@@ -385,5 +385,36 @@
    "country_unknown"
   ],
   "approved": false
+ },
+ {
+  "name": "ValkaAI",
+  "desc": "AI personas that react to live events for audiences",
+  "month": "2026-11",
+  "country": "Czechia",
+  "amount": 10852647,
+  "round": "Pre-Seed",
+  "investors": "",
+  "sector": "Consumer",
+  "use": "",
+  "url": "https://www.eu-startups.com/2026/11/czech-startup-valkaai-extends-pre-seed-round-to-e13-million-to-bring-ai-personas-to-live-events-at-scale/",
+  "category": "Consumer",
+  "sub": "Media",
+  "customer": "",
+  "ai": "",
+  "conf": "review",
+  "blurb": "AI personas that react to live events for audiences",
+  "blurb_src": "llm",
+  "country_src": "url",
+  "amount_native": 13000000.0,
+  "currency": "EUR",
+  "fx_rate": 0.834819,
+  "fx_final": false,
+  "source_entry": "899a64ee528169ea",
+  "issue_date": "2026-11-16",
+  "flags": [
+   "fx_provisional",
+   "label_low_confidence"
+  ],
+  "approved": false
  }
 ]

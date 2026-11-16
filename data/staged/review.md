@@ -18,6 +18,7 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | triPica | 2026-11 | 10,349,573 | Undisclosed/Other | France | Climate › Energy | label_fallback | https://www.eu-startups.com/2026/11/paris-based-tripica-raises-e12-4-million-to-simplify-billing-for-europes-evolving-energy-and-telecom-markets/ |
 | Switchpoint Bio | 2026-11 | 3,956,090 | Pre-Seed | Europe (unspecified) | Health › Medtech | label_low_confidence | https://tech.eu/2026/11/11/why-do-some-patients-respond-to-drugs-and-others-dont-switchpoint-bio-raises-53m-to-find-out/ |
 | Mondrio | 2026-11 | 2,802,398 | Undisclosed/Other | Europe (unspecified) | Enterprise › Productivity | label_fallback | https://techfundingnews.com/mondrio-3-75m-seed-ai-pricing-agents/ |
+| ValkaAI | 2026-11 | 10,852,647 | Pre-Seed | Czechia | Consumer › Media | label_low_confidence | https://www.eu-startups.com/2026/11/czech-startup-valkaai-extends-pre-seed-round-to-e13-million-to-bring-ai-personas-to-live-events-at-scale/ |
 
 ## Published, but worth a glance
 
@@ -98,3 +99,4 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Orakl Oncology | 2026-11 | country unknown |
 | Griffin | 2026-11 | country unknown |
 | Gama | 2026-11 | country unknown |
+| Pro Climbing League | 2026-11 | country unknown |
