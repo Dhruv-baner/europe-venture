@@ -100,3 +100,11 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Griffin | 2026-11 | country unknown |
 | Gama | 2026-11 | country unknown |
 | Pro Climbing League | 2026-11 | country unknown |
+| Valeria | 2026-11 | country unknown, shares a name with another company |
+| Daisytuner | 2026-11 | country unknown |
+| Alecto | 2026-11 | country unknown |
+| Mosaico | 2026-11 | country unknown |
+| Intergrid | 2026-11 | country unknown |
+| Blackbird Coffee | 2026-11 | country unknown |
+| Stark Future | 2026-11 | country unknown, shares a name with another company |
+| Stoa | 2026-11 | country unknown, shares a name with another company |
