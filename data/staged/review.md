@@ -19,6 +19,8 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Switchpoint Bio | 2026-11 | 3,956,090 | Pre-Seed | Europe (unspecified) | Health › Medtech | label_low_confidence | https://tech.eu/2026/11/11/why-do-some-patients-respond-to-drugs-and-others-dont-switchpoint-bio-raises-53m-to-find-out/ |
 | Mondrio | 2026-11 | 2,802,398 | Undisclosed/Other | Europe (unspecified) | Enterprise › Productivity | label_fallback | https://techfundingnews.com/mondrio-3-75m-seed-ai-pricing-agents/ |
 | ValkaAI | 2026-11 | 10,852,647 | Pre-Seed | Czechia | Consumer › Media | label_low_confidence | https://www.eu-startups.com/2026/11/czech-startup-valkaai-extends-pre-seed-round-to-e13-million-to-bring-ai-personas-to-live-events-at-scale/ |
+| Asynchronics | 2026-11 | 2,324,005 | Seed | Europe (unspecified) | Defence & Space › Satellites | label_low_confidence | https://techfundingnews.com/asynchronics-raises-3-1m-spacecraft-digital-twins/ |
+| Previsia | 2026-11 | 3,171,313 | Seed | Europe (unspecified) | Industry › Industrial | label_low_confidence | https://techfundingnews.com/previsia-raises-3-8m-ai-risk-prevention-seed/ |
 
 ## Published, but worth a glance
 
@@ -108,3 +110,16 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Blackbird Coffee | 2026-11 | country unknown |
 | Stark Future | 2026-11 | country unknown, shares a name with another company |
 | Stoa | 2026-11 | country unknown, shares a name with another company |
+| Traitomic | 2026-11 | country unknown |
+| Genesis AI | 2026-11 | country unknown |
+| Nomadic | 2026-11 | country unknown |
+| Pretxt | 2026-11 | country unknown |
+| Fermat | 2026-11 | country unknown |
+| Model ML | 2026-11 | shares a name with another company |
+| Treat | 2026-11 | country unknown |
+| Remanence | 2026-11 | country unknown |
+| Qluster | 2026-11 | country unknown |
+| NABU | 2026-11 | country unknown, shares a name with another company |
+| MatchWornShirt | 2026-11 | country unknown |
+| Syntric Group | 2026-11 | country unknown |
+| RHISE AI | 2026-11 | country unknown |
