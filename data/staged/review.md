@@ -123,3 +123,12 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | MatchWornShirt | 2026-11 | country unknown |
 | Syntric Group | 2026-11 | country unknown |
 | RHISE AI | 2026-11 | country unknown |
+| Dcubed | 2026-11 | country unknown |
+| Iconic | 2026-11 | country unknown |
+| OurPetsLife | 2026-11 | country unknown |
+| Agreka Build | 2026-11 | country unknown |
+| Palm Health | 2026-11 | country unknown |
+| etiCloud | 2026-11 | country unknown |
+| CloudBackend | 2026-11 | country unknown |
+| Disseqt AI | 2026-11 | country unknown |
+| Visage Technologies | 2026-11 | country unknown |
