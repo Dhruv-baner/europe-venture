@@ -480,5 +480,36 @@
    "country_unknown"
   ],
   "approved": false
+ },
+ {
+  "name": "Mistral AI",
+  "desc": "Foundation AI models sold to European businesses and public institutions",
+  "month": "2026-11",
+  "country": "France",
+  "amount": 83480900,
+  "round": "Series D",
+  "investors": "Deutsche Telekom",
+  "sector": "AI and Software",
+  "use": "",
+  "url": "https://www.eu-startups.com/2026/11/mistral-balzes-ahead-with-an-additional-e100-million-to-their-series-d-by-t-capital/",
+  "category": "AI Infra",
+  "sub": "Models",
+  "customer": "",
+  "ai": "",
+  "conf": "review",
+  "blurb": "Foundation AI models sold to European businesses and public institutions",
+  "blurb_src": "llm",
+  "country_src": "existing",
+  "amount_native": 100000000.0,
+  "currency": "EUR",
+  "fx_rate": 0.834809,
+  "fx_final": false,
+  "source_entry": "119cc0ae2e5b2cea",
+  "issue_date": "2026-11-20",
+  "flags": [
+   "fx_provisional",
+   "possible_duplicate"
+  ],
+  "approved": false
  }
 ]
