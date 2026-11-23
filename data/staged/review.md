@@ -139,3 +139,7 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Wilgot | 2026-11 | country unknown |
 | Elysian Aircraft | 2026-11 | country unknown |
 | LATO | 2026-11 | country unknown |
+| Hoplite | 2026-11 | country unknown |
+| Archer | 2026-11 | country unknown |
+| Gotmoves | 2026-11 | country unknown |
+| Ranketta | 2026-11 | country unknown |
