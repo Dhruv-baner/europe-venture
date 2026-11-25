@@ -22,6 +22,8 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Asynchronics | 2026-11 | 2,324,005 | Seed | Europe (unspecified) | Defence & Space › Satellites | label_low_confidence | https://techfundingnews.com/asynchronics-raises-3-1m-spacecraft-digital-twins/ |
 | Previsia | 2026-11 | 3,171,313 | Seed | Europe (unspecified) | Industry › Industrial | label_low_confidence | https://techfundingnews.com/previsia-raises-3-8m-ai-risk-prevention-seed/ |
 | Mistral AI | 2026-11 | 83,480,900 | Series D | France | AI Infra › Models | possible_duplicate | https://www.eu-startups.com/2026/11/mistral-balzes-ahead-with-an-additional-e100-million-to-their-series-d-by-t-capital/ |
+| Trustly | 2026-11 | 45,195,480 | Undisclosed/Other | Sweden | Fintech › Payments | label_low_confidence, possible_duplicate | https://tech.eu/2026/11/24/trustly-completes-60m-funding-raise/ |
+| Pliant | 2026-11 | 167,031,200 | Debt Financing | Germany | Fintech › Payments | possible_duplicate | https://tech.eu/2026/11/24/pliant-secures-over-eur200m-in-debt-financing-to-scale-european-payments-business/ |
 
 ## Published, but worth a glance
 
@@ -143,3 +145,4 @@ Rows held back need a decision. To publish one: edit `data/staged/held_rows.json
 | Archer | 2026-11 | country unknown |
 | Gotmoves | 2026-11 | country unknown |
 | Ranketta | 2026-11 | country unknown |
+| Bcomp | 2026-11 | country read from the text by the AI: check it |
